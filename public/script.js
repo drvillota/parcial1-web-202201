@@ -3,12 +3,19 @@ const input = document.getElementById('inputText');
 const table = document.getElementById('table');
 const tbody = document.getElementById('body-table');
 const message = document.getElementById('message');
+const cardBody = document.getElementsByClassName("card-body");
 
 enterButton.addEventListener('click', (event) => {
   //Implementar lógica del button submit
-  alert('Implementar lógica del button submit');
-  getUser('james');
+  //alert('Implementar lógica del button submit');
+  //getUser('james');
   event.preventDefault();
+
+  const username = document.createElement("h1");
+  username.textContent = getUser(input.value)
+  username.className = "card-title";
+
+  cardBody[0].appendChild(username);
 });
 
 /**
